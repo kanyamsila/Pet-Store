@@ -9,7 +9,7 @@ public class PetQuery {
     
     private String Id;
     
-    private String pettype;
+    private String type;
 
     private String name;
 

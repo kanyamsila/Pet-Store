@@ -11,7 +11,7 @@ public class Pet{
 	@Id
 	private String id;
 
-	private String pettype;
+	private String type;
 
 	private String name;
 
