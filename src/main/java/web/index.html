@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+<title>Pet Store</title>
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>   
+<div>
+<h3>All Pets</h3>
+<ul>
+    <li ng-repeat="findPet in petRepository" >{{petRepository}}</li>
+</ul>
+
+<br/>
+
+<h3>Create Pet</h3>
+<form ng-submit="createPet()">
+    <input type="text" ng-model="type"/>
+    <input type="text" ng-model="name"/>
+    <input type="text" ng-model="color"/>
+    <input type="text" ng-model="price"/>
+</form>
+{{newPet}}
+
+<br/>
+
+<h3>Find Pet by Id</h3>
+<form ng-submit="findPet()">
+<input type="text" ng-model="id"/>
+<input type="submit" value="Submit"/>
+</form>
+{{onePet}}
+
+<br/>
+<br/>
+
+<h3>Find Pet by Type</h3>
+<form ng-submit="findbyType()">
+<input type="text" ng-model="type"/>
+<input type="submit" value="Submit"/>
+</form>
+{{bytye}}
+
+<br/>
+
+<h3>Update Pet</h3>
+<form ng-submit="updatePet()">
+    <input type="text" ng-model="id"/>
+    <input type="submit" value="Submit" />
+</form>
+{{updatedPet}}
+
+<br/>
+<h3>Delete Pet</h3>
+<form ng-submit="deletePet()">
+    <input type="text" ng-model="id"/>
+    <input type="submit" value="Submit"/>
+</form>
+{{deletedPet}}
+</div>
+<script src="web.resources/controller.js"></script>
+</body>
+</html>

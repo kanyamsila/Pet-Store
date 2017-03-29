@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="Pet">
+<head>
+<title>Pet Store</title>
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>  
+
+<div ng-app="Pet" ng-controller="QueryService"> 
+    <h2>Pet</h2>
+    <table>
+        <tr ng-repeat="Pet in data">
+                <td>{{Pet.type}}</td>
+                <td>{{Pet.name}}</td>
+                <td>{{Pet.color}}</td>
+                <td>{{Pet.price}}</td>
+        </tr>
+    </table>
+</div>
+<Script>
+var app = angular.module('Pet', []);
+
+app.controller('QueryService', function($scope, $http) {
+  var providers = [];
+  $http.get("http://localhost:8080/api/pets")
+    .then(function(response) {
+      $scope.data = response.data.records;
+      console.log(data)
+        for(var i in data){
+        var sp = {
+        type: data[i].type,
+        name: data[i].name,
+        color: data[i].color,
+        price: data[i].price,
+        }
+        providers.push(sp);
+        }
+        $scope.providers = providers;
+    });
+});
+</Script>
+</body>
+</html>

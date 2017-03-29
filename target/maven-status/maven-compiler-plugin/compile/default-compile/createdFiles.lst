@@ -1,6 +1,5 @@
-za\co\reverside\demo\repository\PetRepository.class
 za\co\reverside\demo\schema\PetQuery.class
 za\co\reverside\demo\Application.class
 za\co\reverside\demo\service\QueryService.class
+za\co\reverside\demo\repository\PetRepository.class
 za\co\reverside\demo\model\Pet.class
-za\co\reverside\demo\UiApplication.class
